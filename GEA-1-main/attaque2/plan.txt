@@ -1,0 +1,32 @@
+I) Générer les polynomes
+II) Guess les bits
+III) Pivot de Gauss
+
+I)
+
+1°) Définir chacun des bits du registre pour chaque tour en une combinaison linéaire
+des bits de l'état initial 
+-> Entier de 64 bits (29 + 31) avec le i-ème bit à 1 si la combinaison linéaire contient le i-ème bit
+de l'état initial. (29 premiers pour le registre D, les 31 suivants pour A) 
+[Pour chaque tour, pour chaque variable entrant dans f]
+Chaque variable dépend au plus de 31 bits -> 7 entiers de 31 bits (64 si on differencie déjà registre A et D)
+
+A la volée :
+2°) Remplacer dans l'expression de la fonction f les variables par les combinaisons linéaires
+pour chaque tour.
+-> Distribuer les produits pour générer les monomes.
+
+
+II) Faire le Guess
+
+1°) On itére sur le tableau des monomes produits.
+Si un monome contient un bit guessé :
+ - Si le bit guessé est 0 -> on le supprime du tableau
+ - Si le bit guessé est 1 -> on le supprime de l'entier -> si l'entier vaut 0, un 1 est produit TODO
+
+2°) Renommage des monomes -> obtenir un système linéaire.
+
+III) Pivot de Gauss
+A voir
+
+
